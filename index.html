@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>I'm a Feminist</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body{background:black;}
+
+/*슬라이더*/
+		#slidebox{width: 900px; height: 490px;position: relative; left:calc(50% - 450px); margin-bottom: 100px;}
+
+			.slidecontainer{ position: absolute; width: 800px; left:calc(50% - 400px); bottom: 0;}
+				.slider{-webkit-appearance:none; width: 100%; height: 5px; background:#d3d3d3; outline: none;}
+		
+				.slider::-webkit-slider-thumb {
+					-webkit-appearance:none; 
+					appearance:none; 
+					width: 25px; 
+					height: 25px; 
+					background: black; 
+					cursor: pointer; 
+					border-radius: 50%;
+					border-style: solid;
+					border-color: white;
+				}
+
+				.slider::-moz-range-thumb {
+					width: 25px; 
+					height: 25px; 
+					background: white; 
+					cursor: pointer; 
+				}
+
+		#imimgcontainer{width: 780px; height: 400px; padding: 0; left: calc(50% - 390px);  position: absolute;}
+
+			.imimg{position:absolute;width: 760px; padding-top: 150px; left: 20px;}
+
+		#linecontainer{position: absolute; width: 800px; height: 400px; padding: 0; left:calc(50% - 400px);}
+/*여신상*/
+		#statuebox{position: relative; width: 900px; left: calc(50% - 450px); height: 550px; margin-bottom: 100px; }
+		#statueimg{width: 550px; left: calc(50% - 275px); position: absolute;}
+
+/*droptarget*/
+		#dragbox{position: relative; width: 900px; height: 100px; left: calc(50% - 450px);margin-bottom: 300px;}
+		.droptarget { float:left; height: 35px; margin: 10px; width: 90px; border-bottom : 1px solid white; color: white; }
+		.dragtext{position: relative; width: 800px; height: 200px; left: calc(50% - 400px); }
+		.dragempty{position: relative; width: 800px; height: 200px; left: calc(50% - 400px); }
+
+	</style>
+</head>
+<body>
+	<h1 style="color: white;">blablalala</h1>
+
+	<div id="statuebox">
+		<img src="statue.jpg" id="statueimg">	
+	</div>
+
+	<section id="slidebox">
+		
+		<div id="linecontainer">
+			<canvas id="myCanvas" width="800" height="400" style="border:1px solid #d3d3d3;">
+			</canvas>
+		</div>
+
+		<div id="imimgcontainer">
+			<img src="./im/im1.png" class="imimg" id="monitor">
+		</div>
+		<div class="slidecontainer">
+			<input type="range" min="1" max="23" value="1" class="slider" id="myRange">
+			<p style="color: white">Value <span id="demo"></span></p>
+		</div>
+	</section>
+
+	<!--드래그드롭-->
+	<section id="dragbox">
+		<div class="dragtext">
+			<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<p ondragstart="dragStart(event)" draggable="true" id="dragtarget">중립은</p>
+			</div>
+			<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<p ondragstart="dragStart(event)" draggable="true" id="dragtarget">가해자에게만</p>
+			</div>
+			<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<p ondragstart="dragStart(event)" draggable="true" id="dragtarget">이로울 뿐</p>
+			</div>
+			<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<p ondragstart="dragStart(event)" draggable="true" id="dragtarget">피해자에게는</p>
+			</div>
+			<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<p ondragstart="dragStart(event)" draggable="true" id="dragtarget">아무런</p>
+			</div>
+			<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<p ondragstart="dragStart(event)" draggable="true" id="dragtarget">도움이</p>
+			</div>
+			<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<p ondragstart="dragStart(event)" draggable="true" id="dragtarget">되지</p>
+			</div>
+			<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<p ondragstart="dragStart(event)" draggable="true" id="dragtarget">않으며</p>
+			</div>
+			<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<p ondragstart="dragStart(event)" draggable="true" id="dragtarget">침묵은</p>
+			</div>
+			<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<p ondragstart="dragStart(event)" draggable="true" id="dragtarget">결국</p>
+			</div>
+			<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<p ondragstart="dragStart(event)" draggable="true" id="dragtarget">괴롭히는</p>
+			</div>
+			<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<p ondragstart="dragStart(event)" draggable="true" id="dragtarget">사람</p>
+			</div>
+			<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<p ondragstart="dragStart(event)" draggable="true" id="dragtarget">편에</p>
+			</div>
+			<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<p ondragstart="dragStart(event)" draggable="true" id="dragtarget">서 있는</p>
+			</div>
+			<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<p ondragstart="dragStart(event)" draggable="true" id="dragtarget">것이다</p>
+			</div>
+		</div>
+
+		<div class="dragempty">
+			<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		</div>
+	</section>
+
+
+	<script>
+
+		//--슬라이더--//
+		var slider = document.getElementById("myRange");
+		var output = document.getElementById("demo");
+		output.innerHTML = slider.value;
+
+		slider.oninput = function() {
+			output.innerHTML = this.value;
+			monitor.src = "./im/im"+ this.value +".png";
+
+			console.log(this.value);
+		}
+
+		//--슬라이더 라인--//
+		var c = document.getElementById("myCanvas");
+		var ctx = c.getContext("2d");
+		ctx.beginPath();
+		ctx.moveTo(0,0);
+		ctx.lineTo(800,100);
+		ctx.strokeStyle="white";
+		ctx.lineWidth = 0.3;
+		ctx.stroke();
+
+		//--슬라이더 라인 복제--//
+
+		//--드래그앤드롭--//
+		function dragStart(event){
+			event.dataTransfer.setData("Text",event.target.id);
+		}
+		function allowDrop(event) {
+			event.preventDefault();
+		}
+		function drop(event){
+			event.preventDefault();
+			var data = event.dataTransfer.getData("Text");
+			event.target.appendChild(document.getElementById(data));
+		}
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+	</script>
+</body>
+</html>
